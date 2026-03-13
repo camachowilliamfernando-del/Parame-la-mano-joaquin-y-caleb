@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Páreme la Mano! Neón</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>¡Páreme la Mano! ✋</h1>
+        
+        <div id="setup-section">
+            <button id="btn-generar" onclick="iniciarJuego()">Generar Letra</button>
+            <div id="letra-display">?</div>
+        </div>
+
+        <div id="game-section" class="hidden">
+            <div id="timer-display">Tiempo: 02:00</div>
+            
+            <div class="inputs-grid">
+                <div class="field">
+                    <label>Nombre</label>
+                    <input type="text" id="nombre" autocomplete="off">
+                </div>
+                <div class="field">
+                    <label>Apellido</label>
+                    <input type="text" id="apellido" autocomplete="off">
+                </div>
+                <div class="field">
+                    <label>Ciudad o País</label>
+                    <input type="text" id="lugar" autocomplete="off">
+                </div>
+                <div class="field">
+                    <label>Fruta o Color</label>
+                    <input type="text" id="objeto" autocomplete="off">
+                </div>
+                <div class="field">
+                    <label>Cosa</label>
+                    <input type="text" id="cosa" autocomplete="off">
+                </div>
+            </div>
+            
+            <button id="btn-stop" onclick="terminarJuego()">¡PÁREME LA MANO!</button>
+        </div>
+
+        <div id="result-section" class="hidden">
+            <h2>Resultados</h2>
+            <ul id="lista-resultados"></ul>
+            <button class="btn-reiniciar" onclick="reiniciar()">Jugar de nuevo</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
